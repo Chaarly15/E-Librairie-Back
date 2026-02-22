@@ -125,7 +125,7 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
-    /*ServiceProvider to the providers*/
+    /* ServiceProvider to the providers */
 
     'providers' => ServiceProvider::defaultProviders()->merge([
         // Providers personnalisés

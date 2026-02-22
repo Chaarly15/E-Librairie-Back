@@ -11,17 +11,17 @@ class Category extends Model
     /** @use HasFactory<\Database\Factories\CategoryFactory> */
     use HasFactory;
 
-     protected $fillable = [
+    protected $fillable = [
         'label',
         'description',
     ];
 
-     public static function random()
+    public static function random()
     {
         return static::inRandomOrder()->first();
     }
 
-     public function boocks(): HasMany
+    public function boocks(): HasMany
     {
         return $this->hasMany(Book::class);
     }

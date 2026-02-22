@@ -17,7 +17,7 @@ class Loan extends Model
         'user_id',
         'loan_date',
         'return_date',
-        'status'
+        'status',
     ];
 
     protected function casts(): array
@@ -27,12 +27,12 @@ class Loan extends Model
         ];
     }
 
-     public function boock(): BelongsTo
+    public function boock(): BelongsTo
     {
         return $this->belongsTo(Book::class);
     }
 
-     public function user(): BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }

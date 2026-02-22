@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Book;
-use App\Models\Enums\StatusEnum;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -20,10 +19,10 @@ class LoanFactory extends Factory
     public function definition(): array
     {
         return [
-            'book_id'=>Book::factory(),
+            'book_id' => Book::factory(),
             'user_id' => User::random() ?: User::factory(),
-            'loan_date'=>fake()->date(),
-            'return_date'=>fake()->date(),
+            'loan_date' => fake()->date(),
+            'return_date' => fake()->date(),
         ];
     }
 }

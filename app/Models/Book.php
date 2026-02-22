@@ -11,7 +11,7 @@ class Book extends Model
     /** @use HasFactory<\Database\Factories\BookFactory> */
     use HasFactory;
 
-     protected $fillable = [
+    protected $fillable = [
         'author_id',
         'category_id',
         'title',
