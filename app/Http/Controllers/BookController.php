@@ -24,10 +24,17 @@ class BookController extends Controller
 
         // Création de la ressource
         $book = Book::create($request->toArray());
-        //dd($book);
+        // dd($book);
 
         // Valeur retournées
         return new BookResource($book);
 
+    }
+
+    public function read()
+    {
+        $books = Book::bookWithDetails()->get();
+
+        return BookResource::collection($books);
     }
 }

@@ -11,5 +11,6 @@ Route::middleware(['api'])->group(
     function () {
         require __DIR__.'/Api/userRoutes.php';
         require __DIR__.'/Api/bookRoutes.php';
+        require __DIR__.'/Api/loanRoutes.php';
     }
 );

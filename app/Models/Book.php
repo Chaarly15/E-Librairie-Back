@@ -28,4 +28,9 @@ class Book extends Model
     {
         return $this->belongsTo(Author::class);
     }
+
+    public function scopeBookWithDetails($query)
+    {
+        return $query->with(['category', 'author']);
+    }
 }
